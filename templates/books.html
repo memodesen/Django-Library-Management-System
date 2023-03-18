@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+{% endblock %}
+
+{% block page_title %}
+    Books
+{% endblock page_title %}
+   
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="sol">
+        <h1>Library Management System</h1>
+    </div>
+
+    <div class="sağ">
+
+
+
+        <div class="Admin">
+
+                <a class="memo" href="{% url 'books' %}">Books</a>
+
+        </div>
+
+
+        <div class="Register">
+            <a class="memo" href="{% url 'issue' %}">Issue Book</a>
+
+        </div>
+
+
+        <div class="Student">
+            <a class="memo" href="{% url 'logout' %}">Logout</a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="registerpanel">
+
+
+
+        <div class="registertext">
+            <h1 id="registertext">Books</h1>
+        </div>
+
+
+        <ul class="styled-list">
+            {% for book in books %}
+            <li class="eleman"> {{ book.name }}</li>
+            {% endfor %}
+        </ul>
+
+
+
+
+      
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+

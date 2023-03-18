@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block page_title %}
+    Library Management System
+{% endblock page_title %}
+   
+
+{% block content %}
+
+<div class="container">
+
+    <div class="sol">
+        <h1>Library Management System</h1>
+    </div>
+
+    <div class="sağ">
+
+            <div class="Home">
+                <a class="memo" href="{% url 'index' %}">Home</a>
+           </div>
+
+
+        <div class="Admin">
+
+                <a class="memo" href="{% url 'admiin' %}">Admin Login</a>
+
+        </div>
+
+
+        <div class="Register">
+            <a class="memo" href="{% url 'register' %}">Register As Student</a>
+
+        </div>
+
+
+        <div class="Student">
+            <a class="memo" href="{% url 'loginn' %}">Student Login</a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="welcome">
+
+          <div class="big" >
+
+            <h1 id="big-yazi">WELCOME TO THE ONLINE LIBRARY</h1>
+
+          </div>
+
+
+
+          <div class="small" >
+
+            <h3 id="small-yazi">Explore and Borrow Books Through Online</h3>
+
+          </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}
+

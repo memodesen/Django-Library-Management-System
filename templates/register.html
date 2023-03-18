@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block page_title %}
+    Register Page
+{% endblock page_title %}
+   
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="sol">
+        <h1>Library Management System</h1>
+    </div>
+
+    <div class="sağ">
+
+            <div class="Home">
+                <a class="memo" href="{% url 'index' %}">Home</a>
+           </div>
+
+
+        <div class="Admin">
+
+                <a class="memo" href="{% url 'admiin' %}">Admin Login</a>
+
+        </div>
+
+
+        <div class="Register">
+            <a class="memo" href="{% url 'index' %}">Register As Student</a>
+
+        </div>
+
+
+        <div class="Student">
+            <a class="memo" href="{% url 'index' %}">Student Login</a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="registerpanel">
+
+
+
+        <div class="registertext">
+            <h1 id="registertext">Register As Student</h1>
+        </div>
+
+
+      <form action="register" method="POST" class="myform">
+
+              
+            {% csrf_token %}
+
+            {{form}}
+       
+
+        <div class="asd">
+        <label for="Register"></label>
+        <button class="zort">Register</button>
+        </div>
+
+
+      </form>
+
+
+      
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+
